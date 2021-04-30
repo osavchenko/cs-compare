@@ -4,16 +4,30 @@ declare(strict_types=1);
 
 namespace App;
 
-class TestClass extends \Symfony\Component\Console\Command\Command
+use Symfony\Component\Console\Command\Command;
+
+class TestClass extends Command
 {
+    /**
+     * @var string
+     *
+     * @phpcs:disable SlevomatCodingStandard.TypeHints.PropertyTypeHint
+     */
     protected static $defaultName = 'name';
 
-    public function somePublicMethod(int $firstArg, string $secondArg): int
+    /**
+     * @param int $firstArg
+     * @param string $secondArg
+     */
+    public function somePublicMethod($firstArg, $secondArg): int
     {
-        return (int) $secondArg;
+        return (int)$secondArg;
     }
 
-    private function somePrivate_method($argStr, $arg_arr)
+    /**
+     * @return string[]
+     */
+    private function somePrivateMethod($argStr, $arg_arr): array
     {
         if ($argStr === 'pending') {
             $a = static function () {
