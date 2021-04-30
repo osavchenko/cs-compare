@@ -1,0 +1,17 @@
+{
+    "name": "t2038/test-cs",
+    "description": "",
+    "authors": [
+        {
+            "name": "Oleksandr Savchenko",
+            "email": "oleksandr.savchenko@nordsec.com"
+        }
+    ],
+    "require": {
+        "slevomat/coding-standard": "^7.0",
+        "friendsofphp/php-cs-fixer": "^v2.18"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
+    }
+}
